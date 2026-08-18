@@ -1,0 +1,587 @@
+Panels:
+  - Class: rviz_common/Displays
+    Help Height: 70
+    Name: Displays
+    Property Tree Widget:
+      Expanded:
+        - /Global Map1
+        - /RACER Occupancy1
+        - /RACER Occupancy1/Topic1
+      Splitter Ratio: 0.5
+    Tree Height: 366
+  - Class: rviz_common/Views
+    Expanded:
+      - /Current View1
+    Name: Views
+    Splitter Ratio: 0.5
+  - Class: rviz_common/Time
+    Experimental: false
+    Name: Time
+    SyncMode: 0
+    SyncSource: SCAN Cloud
+  - Class: rviz_common/Selection
+    Name: Selection
+  - Class: rviz_common/Tool Properties
+    Expanded: ~
+    Name: Tool Properties
+    Splitter Ratio: 0.5
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Alpha: 1
+      Class: rviz_default_plugins/RobotModel
+      Collision Enabled: false
+      Description File: ""
+      Description Source: Topic
+      Description Topic:
+        Depth: 5
+        Durability Policy: Transient Local
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /robot_description
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        FL_calf:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        FL_calf_rotor:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        FL_foot:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        FL_hip:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        FL_hip_rotor:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        FL_thigh:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        FL_thigh_rotor:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        FR_calf:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        FR_calf_rotor:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        FR_foot:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        FR_hip:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        FR_hip_rotor:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        FR_thigh:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        FR_thigh_rotor:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link Tree Style: Links in Alphabetic Order
+        RL_calf:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RL_calf_rotor:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RL_foot:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RL_hip:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RL_hip_rotor:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RL_thigh:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RL_thigh_rotor:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RR_calf:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RR_calf_rotor:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RR_foot:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RR_hip:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RR_hip_rotor:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RR_thigh:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RR_thigh_rotor:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        base:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        front_camera:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        imu_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        trunk:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+      Mass Properties:
+        Inertia: false
+        Mass: false
+      Name: Go2 Dog
+      TF Prefix: ""
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Class: rviz_default_plugins/TF
+      Enabled: false
+      Frame Timeout: 15
+      Frames:
+        All Enabled: true
+      Marker Scale: 1
+      Name: TF
+      Show Arrows: true
+      Show Axes: true
+      Show Names: true
+      Tree:
+        {}
+      Update Interval: 0
+      Value: false
+    - Alpha: 0.3499999940395355
+      Cell Size: 1
+      Class: rviz_default_plugins/Grid
+      Color: 140; 140; 140
+      Enabled: false
+      Line Style:
+        Line Width: 0.029999999329447746
+        Value: Lines
+      Name: Ground Grid
+      Normal Cell Count: 0
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Plane: XY
+      Plane Cell Count: 15
+      Reference Frame: <Fixed Frame>
+      Value: false
+    - Alpha: 0.1599999964237213
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz_default_plugins/PointCloud2
+      Color: 154; 153; 150
+      Color Transformer: FlatColor
+      Decay Time: 0
+      Enabled: false
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Max Intensity: 4096
+      Min Color: 0; 0; 0
+      Min Intensity: 0
+      Name: Global Map
+      Position Transformer: XYZ
+      Selectable: true
+      Size (Pixels): 2
+      Size (m): 0.03999999910593033
+      Style: Flat Squares
+      Topic:
+        Depth: 5
+        Durability Policy: Transient Local
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /map_generator/global_cloud
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: false
+    - Alpha: 0.75
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz_default_plugins/PointCloud2
+      Color: 255; 255; 255
+      Color Transformer: AxisColor
+      Decay Time: 0
+      Enabled: true
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Max Intensity: 4096
+      Min Color: 0; 0; 0
+      Min Intensity: 0
+      Name: Accumulated Map
+      Position Transformer: ""
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.029999999329447746
+      Style: Flat Squares
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Best Effort
+        Value: /map_ros/accumulated_cloud
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: true
+    - Alpha: 0.30000001192092896
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz_default_plugins/PointCloud2
+      Color: 120; 210; 130
+      Color Transformer: FlatColor
+      Decay Time: 0
+      Enabled: true
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Max Intensity: 4096
+      Min Color: 0; 0; 0
+      Min Intensity: 0
+      Name: Covered Area (RACER free)
+      Position Transformer: XYZ
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.05000000074505806
+      Style: Flat Squares
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /sdf_map/free_1
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: true
+    - Alpha: 0.6499999761581421
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 3.450000047683716
+        Min Value: 0.05000000074505806
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz_default_plugins/PointCloud2
+      Color: 200; 90; 20
+      Color Transformer: AxisColor
+      Decay Time: 0
+      Enabled: true
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Max Intensity: 4096
+      Min Color: 0; 0; 0
+      Min Intensity: 0
+      Name: RACER Occupancy
+      Position Transformer: XYZ
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.05999999865889549
+      Style: Flat Squares
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /sdf_map/occupancy_all_1
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: true
+    - Class: rviz_default_plugins/Marker
+      Enabled: true
+      Name: RACER Frontier
+      Namespaces:
+        {}
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /planning_vis/frontier_1
+      Value: true
+    - Class: rviz_default_plugins/Marker
+      Enabled: true
+      Name: RACER Trajectory
+      Namespaces:
+        B-Spline: true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /planning_vis/trajectory_1
+      Value: true
+    - Alpha: 1
+      Buffer Length: 1
+      Class: rviz_default_plugins/Path
+      Color: 220; 220; 220
+      Enabled: true
+      Head Diameter: 0.30000001192092896
+      Head Length: 0.20000000298023224
+      Length: 0.30000001192092896
+      Line Style: Lines
+      Line Width: 0.029999999329447746
+      Name: SCAN Path
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Pose Color: 255; 85; 255
+      Pose Style: None
+      Radius: 0.029999999329447746
+      Shaft Diameter: 0.10000000149011612
+      Shaft Length: 0.10000000149011612
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /quad_0/path
+      Value: true
+    - Alpha: 0.3499999940395355
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz_default_plugins/PointCloud2
+      Color: 230; 160; 60
+      Color Transformer: FlatColor
+      Decay Time: 0
+      Enabled: true
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Max Intensity: 4096
+      Min Color: 0; 0; 0
+      Min Intensity: 0
+      Name: SCAN Cloud
+      Position Transformer: XYZ
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.029999999329447746
+      Style: Flat Squares
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Best Effort
+        Value: /quad_0/cloud
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: true
+  Enabled: true
+  Global Options:
+    Background Color: 40; 44; 52
+    Fixed Frame: world
+    Frame Rate: 30
+  Name: root
+  Tools:
+    - Class: rviz_default_plugins/Interact
+      Hide Inactive Objects: true
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/Select
+    - Class: rviz_default_plugins/FocusCamera
+    - Class: rviz_default_plugins/Measure
+      Line color: 128; 128; 0
+    - Class: rviz_default_plugins/SetInitialPose
+      Covariance x: 0.25
+      Covariance y: 0.25
+      Covariance yaw: 0.06853891909122467
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: initialpose
+    - Class: rviz_default_plugins/SetGoal
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /plan_b/start
+  Transformation:
+    Current:
+      Class: rviz_default_plugins/TF
+  Value: true
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Distance: 10
+      Enable Stereo Rendering:
+        Stereo Eye Separation: 0.05999999865889549
+        Stereo Focal Distance: 1
+        Swap Stereo Eyes: false
+        Value: false
+      Focal Point:
+        X: 0
+        Y: 0
+        Z: 0
+      Focal Shape Fixed Size: false
+      Focal Shape Size: 0.05000000074505806
+      Invert Z Axis: false
+      Name: Current View
+      Near Clip Distance: 0.009999999776482582
+      Pitch: 0.7853981852531433
+      Target Frame: base
+      Value: Orbit (rviz_default_plugins)
+      Yaw: 0.7853981852531433
+    Saved:
+      - Class: rviz_default_plugins/Orbit
+        Distance: 6.5
+        Enable Stereo Rendering:
+          Stereo Eye Separation: 0.05999999865889549
+          Stereo Focal Distance: 1
+          Swap Stereo Eyes: false
+          Value: false
+        Focal Point:
+          X: 0
+          Y: 0
+          Z: 0.550000011920929
+        Focal Shape Fixed Size: true
+        Focal Shape Size: 0.05000000074505806
+        Invert Z Axis: false
+        Name: Dog Follow
+        Near Clip Distance: 0.009999999776482582
+        Pitch: 0.47999998927116394
+        Target Frame: base
+        Value: Orbit (rviz_default_plugins)
+        Yaw: 3.1415927410125732
+      - Class: rviz_default_plugins/Orbit
+        Distance: 35
+        Enable Stereo Rendering:
+          Stereo Eye Separation: 0.05999999865889549
+          Stereo Focal Distance: 1
+          Swap Stereo Eyes: false
+          Value: false
+        Focal Point:
+          X: 3
+          Y: 0
+          Z: 4.699999809265137
+        Focal Shape Fixed Size: true
+        Focal Shape Size: 0.05000000074505806
+        Invert Z Axis: false
+        Name: Global Overview
+        Near Clip Distance: 0.009999999776482582
+        Pitch: 0.8199999928474426
+        Target Frame: <Fixed Frame>
+        Value: Orbit (rviz_default_plugins)
+        Yaw: 4.050000190734863
+Window Geometry:
+  Displays:
+    collapsed: true
+  Height: 1080
+  Hide Left Dock: true
+  Hide Right Dock: false
+  QMainWindow State: 000000ff00000000fd000000010000000000000447000003defc0200000005fb000000100044006900730070006c006100790073000000003d000001f1000000c900fffffffb0000000a005600690065007700730000000234000000a4000000a400fffffffb0000000800540069006d006500000002de000000390000003900fffffffb0000001200530065006c0065006300740069006f006e000000031d0000005c0000005c00fffffffb0000001e0054006f006f006c002000500072006f0070006500720074006900650073000000037f0000009c0000005c00ffffff00000780000003de00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  Selection:
+    collapsed: true
+  Time:
+    collapsed: true
+  Tool Properties:
+    collapsed: true
+  Views:
+    collapsed: true
+  Width: 1920
+  X: 0
+  Y: 0

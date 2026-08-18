@@ -1,0 +1,31 @@
+# Manual multi-floor waypoint route (SCAN mode3 reference path).
+# GROUND/route heights; scan_planner adds grid_map.body_height (0.4 m).
+#   L0 -> west ramp (x=-5.5) -> L1 -> traverse east -> east connection (x=9) -> L2
+reference_path_publisher:
+  ros__parameters:
+    frame_id: world
+    publish_delay_sec: 1.0
+    waypoints:
+      # L0 approach / west ramp base
+      [-5.5, 5.5, 0.10,
+       -5.5, 4.5, 0.30,
+       -5.5, 3.5, 0.40,
+       -5.5, 2.5, 0.55,
+       -5.5, 1.5, 0.70,
+       -5.5, 0.5, 0.85,
+       -5.5, -0.5, 1.00,
+       -5.5, -1.5, 1.20,
+       -5.5, -2.5, 1.40,
+       -5.5, -3.5, 1.55,
+       # L1 top (west ramp arrival)
+       -5.5, -4.5, 1.55,
+       # L1 traverse west -> east
+       -2.0, 0.0, 1.55,
+       2.0, 0.0, 1.55,
+       6.0, 0.0, 1.55,
+       # east connection to L2
+       9.0, 0.0, 1.55,
+       9.0, 0.0, 2.30,
+       9.0, 1.0, 3.10,
+       # L2 traverse
+       4.0, 1.0, 3.10]

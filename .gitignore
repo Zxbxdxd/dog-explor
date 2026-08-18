@@ -1,0 +1,28 @@
+# ROS 2 / colcon generated files
+build/
+install/
+log/
+**/build/
+**/install/
+**/log/
+
+# Python and editor caches
+__pycache__/
+*.py[cod]
+.vscode/
+.idea/
+
+# Local agent/runtime metadata
+.agents/
+.codex/
+.claude/
+
+# Local recordings and generated manifests
+*.mkv
+*.mp4
+symlink_install_manifest.txt
+
+# ROS runtime data
+*.bag
+*.db3
+*.mcap

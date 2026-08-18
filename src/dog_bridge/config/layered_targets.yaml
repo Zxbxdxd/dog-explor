@@ -1,0 +1,53 @@
+# Layered-exploration multi-floor config (Plan B).
+# Custom 4-floor building (custom_map.pcd): L0..L3 with straight ramps.
+# RACER explores each floor; when coverage/time threshold is reached, task_node
+# asks RACER to plan an obstacle-avoiding transfer to the ramp entrance.  The
+# actual climb then follows the existing hand-authored straight-ramp path.
+#   Floor L0: explore -> climb west ramp (x=-7.5) to L1
+#   Floor L1: explore -> climb east ramp (x=13.5) to L2
+#   Floor L2: explore -> climb west ramp (x=-7.5) to L3
+#   Floor L3: explore -> ALL DONE
+task_node:
+  ros__parameters:
+    layered_mode: true
+    coverage_topic: /map_ros/coverage_floor
+    # See-based absolute coverage: the boustrophedon sweep surveys the whole
+    # floor plane, and the climb fires once ~85% of the floor is seen (the 3 m
+    # lidar leaves a few blocked corners, so 100% is unreachable).
+    coverage_threshold: 85.0
+    coverage_hold_sec: 5.0
+    # Coverage-triggered termination (NOT a fixed time): the climb fires when the
+    # CURRENT floor's coverage delta holds above the threshold. explore_time_sec
+    # is only a long safety fallback in case coverage never reaches it. Give the
+    # dog a bit more time so it finishes the last unexplored pocket before the
+    # timeout forces the climb.
+    explore_time_sec: 360.0
+    # Climb waypoints (BODY height = floor ground + 0.4). Straight-ramp slopes:
+    #   west ramp L0->L1 / L2->L3 : x=-7.5, y 5 -> -3.5
+    #   east ramp L1->L2          : x=13.5, y -3.5 -> 5
+    #   Group 1: west ramp L0->L1 (5 hops along the slope).
+    #   Group 2: east ramp L1->L2 (4 hops along the slope).
+    #   Group 3: west ramp L2->L3 (5 hops along the slope).
+    climb_x: [-7.5, -7.5, -7.5, -7.5, -7.5,  13.5, 13.5, 13.5, 13.5,  -7.5, -7.5, -7.5, -7.5, -7.5]
+    climb_y: [5.0, 2.5, 0.0, -2.5, -3.5,  -3.5, -1.0, 1.5, 5.0,  5.0, 2.5, 0.0, -2.5, -3.5]
+    # Heights follow the generated ramp equation exactly (surface + 0.4 m
+    # body clearance).  The old rounded values sagged as much as 0.37 m below
+    # the ramp and made the final planned step appear to cross the upper slab.
+    climb_z: [0.50, 1.32, 2.15, 2.97, 3.30,
+              3.30, 4.12, 4.95, 6.10,
+              6.10, 6.92, 7.75, 8.57, 8.90]
+    climb_yaw: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    climb_floor: ["L0->L1", "L0->L1", "L0->L1", "L0->L1", "L0->L1",
+                  "L1->L2", "L1->L2", "L1->L2", "L1->L2",
+                  "L2->L3", "L2->L3", "L2->L3", "L2->L3", "L2->L3"]
+    climb_groups: [5, 4, 5]
+    # Dog body height on each layer (ground + 0.4).
+    floor_height: [0.5, 3.3, 6.1, 8.9]
+    # RACER handles only exploration-end -> ramp-base.  Once the dog reaches
+    # that base, /initial_path preserves the predefined straight climb.
+    manual_climb: true
+    # Skip the RACER transfer only when odometry is already effectively at the
+    # first ramp waypoint; never allow a multi-metre direct chord.
+    approach_thresh: 0.35
+    start_delay: 3.0
+    target_timeout: 90.0
